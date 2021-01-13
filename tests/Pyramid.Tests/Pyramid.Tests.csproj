@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Pyramid\Pyramid.csproj" />
+      <ProjectReference Include="..\..\src\Pyramid\Pyramid.csproj" />
     </ItemGroup>
 
 </Project>

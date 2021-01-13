@@ -1,8 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pyramid", "Pyramid\Pyramid.csproj", "{A14ABFB0-A921-4EB3-85BE-9883134D99DC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{76EF6235-DCAA-41AF-80DF-197A9542D2B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pyramid.Tests", "Pyramid.Tests\Pyramid.Tests.csproj", "{FDE95B9D-E8E7-4132-A2A8-F90FA089E98B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{265F318E-7B2E-4CD2-86BC-4859B16F904D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pyramid", "src\Pyramid\Pyramid.csproj", "{0E0D793A-93B7-4B24-9D8A-AAEC7CD59EBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pyramid.Tests", "tests\Pyramid.Tests\Pyramid.Tests.csproj", "{7DD7B89E-D31C-473B-98E5-35F156003AB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pyramid.Console", "src\Pyramid.Console\Pyramid.Console.csproj", "{C4A8DBCD-12FD-4AED-92EF-544771C40798}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,13 +16,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A14ABFB0-A921-4EB3-85BE-9883134D99DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A14ABFB0-A921-4EB3-85BE-9883134D99DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A14ABFB0-A921-4EB3-85BE-9883134D99DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A14ABFB0-A921-4EB3-85BE-9883134D99DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FDE95B9D-E8E7-4132-A2A8-F90FA089E98B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FDE95B9D-E8E7-4132-A2A8-F90FA089E98B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FDE95B9D-E8E7-4132-A2A8-F90FA089E98B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FDE95B9D-E8E7-4132-A2A8-F90FA089E98B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E0D793A-93B7-4B24-9D8A-AAEC7CD59EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E0D793A-93B7-4B24-9D8A-AAEC7CD59EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E0D793A-93B7-4B24-9D8A-AAEC7CD59EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E0D793A-93B7-4B24-9D8A-AAEC7CD59EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD7B89E-D31C-473B-98E5-35F156003AB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD7B89E-D31C-473B-98E5-35F156003AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD7B89E-D31C-473B-98E5-35F156003AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD7B89E-D31C-473B-98E5-35F156003AB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A8DBCD-12FD-4AED-92EF-544771C40798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A8DBCD-12FD-4AED-92EF-544771C40798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A8DBCD-12FD-4AED-92EF-544771C40798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A8DBCD-12FD-4AED-92EF-544771C40798}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E0D793A-93B7-4B24-9D8A-AAEC7CD59EBC} = {76EF6235-DCAA-41AF-80DF-197A9542D2B9}
+		{7DD7B89E-D31C-473B-98E5-35F156003AB4} = {265F318E-7B2E-4CD2-86BC-4859B16F904D}
+		{C4A8DBCD-12FD-4AED-92EF-544771C40798} = {76EF6235-DCAA-41AF-80DF-197A9542D2B9}
 	EndGlobalSection
 EndGlobal
