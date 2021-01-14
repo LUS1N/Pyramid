@@ -4,6 +4,6 @@ namespace Pyramid.Console.InputParser
 {
     public interface IInputParser
     {
-        List<List<int>> ParsePyramid(string[] args);
+        List<List<int>> ParsePyramid(string path);
     }
 }
