@@ -1,12 +1,22 @@
-using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace Pyramid.Console.InputParser
 {
     public class InputFileParser : IInputParser
     {
-        public List<List<int>> ParsePyramid(string path)
+        public int[][] ParsePyramid(string path)
         {
-            throw new System.NotImplementedException();
+            var lines = File.ReadAllLines(path);
+            return lines
+                .Select(ParseInts)
+                .ToArray();
         }
+
+        private static int[] ParseInts(string line) =>
+            line
+                .Split(" ")
+                .Select(int.Parse)
+                .ToArray();
     }
 }

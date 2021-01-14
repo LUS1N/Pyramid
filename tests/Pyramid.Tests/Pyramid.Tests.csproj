@@ -19,8 +19,4 @@
         </PackageReference>
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\..\src\Pyramid\Pyramid.csproj" />
-    </ItemGroup>
-
 </Project>
