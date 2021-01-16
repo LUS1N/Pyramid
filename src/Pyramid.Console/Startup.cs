@@ -18,7 +18,7 @@ namespace Pyramid.Console
             services.AddTransient<IInputParser, InputFileParser>();
         }
 
-        private static void SetupPyramidLogging(this IServiceCollection services)
+        private static IServiceCollection SetupPyramidLogging(this IServiceCollection services)
         {
 #if DEBUG
             Log.Logger = new LoggerConfiguration()
@@ -28,6 +28,7 @@ namespace Pyramid.Console
             services.AddSingleton(new LoggerFactory().AddSerilog());
 #endif
             services.AddLogging();
+            return services;
         }
     }
 }

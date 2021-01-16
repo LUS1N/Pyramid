@@ -10,17 +10,19 @@ namespace Pyramid.Console.Tests.InputParser
     /// </summary>
     public class InputFileParserTests
     {
-        private static int[][] Act(string path)
+        private string _input = "Samples/small.txt";
+
+        private int[][] Act()
         {
             var sut = new AutoMocker().CreateInstance<InputFileParser>();
-            return sut.ParsePyramid(path);
+            return sut.ParsePyramid(_input);
         }
 
         [Fact]
         public async Task CanParseFromSampleFile()
         {
             // act
-            var result = Act("Samples/small.txt");
+            var result = Act();
 
             int[][] expected =
             {
