@@ -1,3 +1,5 @@
+using System;
+
 namespace Pyramid.Console.Application.Output
 {
     public class ConsoleOutputWriter : IOutputWriter
@@ -9,7 +11,7 @@ namespace Pyramid.Console.Application.Output
 
         public void WriteError(string errorMessage)
         {
-            System.Console.Error.Write(errorMessage);
+            System.Console.Error.Write(errorMessage + Environment.NewLine);
         }
     }
 }
