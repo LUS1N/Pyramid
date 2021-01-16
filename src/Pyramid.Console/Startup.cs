@@ -2,6 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Pyramid.Console.Application;
 using Pyramid.Console.Application.InputParser;
+using Pyramid.Console.Application.Output;
 using Serilog;
 
 namespace Pyramid.Console
@@ -15,6 +16,7 @@ namespace Pyramid.Console
 
             services.AddTransient<IApplication, ConsoleApplication>();
             services.AddTransient<IInputParser, InputFileParser>();
+            services.AddTransient<IOutputWriter, ConsoleOutputWriter>();
         }
 
         private static IServiceCollection AddPyramidLogging(this IServiceCollection services)

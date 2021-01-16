@@ -1,5 +1,6 @@
 # Pyramid
 
+## Rules
 You will be given a triangle input (which is a directed graph) and you need to find the path that provides the maximum possible sum of the numbers per the given rules below:
 1. You will start from the top and move downwards to the last possible node.
 1. You must proceed by changing between even and odd numbers subsequently. Suppose that you are on an even number, the next number you choose must be odd,
@@ -8,3 +9,13 @@ You will be given a triangle input (which is a directed graph) and you need to f
 1. You must reach to the bottom of the pyramid.
 1. Assume that there is at least one valid path to the bottom.
 1. If there are multiple paths, which result in the same maximum amount, you can choose any of them.
+
+
+## Running
+
+### Requirements
+- dotnet 5
+
+### Execution steps
+- dotnet build
+- dotnet run

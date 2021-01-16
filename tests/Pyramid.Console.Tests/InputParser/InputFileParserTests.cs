@@ -1,4 +1,6 @@
+using System;
 using System.Threading.Tasks;
+using FluentAssertions;
 using Moq.AutoMock;
 using Pyramid.Console.Application.InputParser;
 using Xunit;
@@ -19,7 +21,7 @@ namespace Pyramid.Console.Tests.InputParser
         }
 
         [Fact]
-        public async Task CanParseFromSampleFile()
+        public void CanParseFromSampleFile()
         {
             // act
             var result = Act();
@@ -33,6 +35,17 @@ namespace Pyramid.Console.Tests.InputParser
 
             // assert
             Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void FileNotFound_ThrowsApplicationException()
+        {
+            // arrange
+            _input = "doesnt_exist.txt";
+
+            // act & assert
+            var exception = Assert.Throws<ApplicationException>(Act);
+            exception.Message.Should().Be("File 'doesnt_exist.txt' not found");
         }
     }
 }

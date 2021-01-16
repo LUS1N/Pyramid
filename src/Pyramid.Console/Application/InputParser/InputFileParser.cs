@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Linq;
 
@@ -7,11 +8,14 @@ namespace Pyramid.Console.Application.InputParser
     {
         public int[][] ParsePyramid(string path)
         {
-            var lines = File.ReadAllLines(path);
+            var lines = GetFileContent(path);
             return lines
                 .Select(ParseInts)
                 .ToArray();
         }
+
+        private static string[] GetFileContent(string path) =>
+            File.Exists(path) ? File.ReadAllLines(path) : throw new ApplicationException($"File '{path}' not found");
 
         private static int[] ParseInts(string line) =>
             line
