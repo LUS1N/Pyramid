@@ -10,7 +10,7 @@ namespace Pyramid.Tests
     /// </summary>
     public class PyramidGraphBuilderTests
     {
-        private readonly int[][] _input =
+        private int[][] _input =
         {
             new[] {1},
             new[] {8, 9},
