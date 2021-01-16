@@ -3,6 +3,7 @@ using System.Linq;
 using Moq;
 using Moq.AutoMock;
 using Pyramid.Console.Application;
+using Pyramid.Console.Application.Exceptions;
 using Pyramid.Console.Application.InputParser;
 using Pyramid.Console.Application.Output;
 using Pyramid.Solver;
@@ -53,7 +54,9 @@ namespace Pyramid.Console.Tests.Application
             // arrange
             var parserMock = new Mock<IInputParser>();
             var message = "error message!";
-            parserMock.Setup(parser => parser.ParsePyramid(_input.First())).Throws(new ApplicationException(message));
+            parserMock.Setup(parser =>
+                    parser.ParsePyramid(_input.First()))
+                .Throws(new ConsoleApplicationException(message));
 
             _mocker.Use(parserMock);
 

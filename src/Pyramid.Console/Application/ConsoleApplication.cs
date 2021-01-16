@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.Logging;
+using Pyramid.Console.Application.Exceptions;
 using Pyramid.Console.Application.InputParser;
 using Pyramid.Console.Application.Output;
 using Pyramid.Solver;
@@ -39,7 +40,7 @@ namespace Pyramid.Console.Application
             {
                 TryRun(args);
             }
-            catch (ApplicationException e)
+            catch (ConsoleApplicationException e)
             {
                 _outputWriter.WriteError(e.Message);
             }
@@ -64,6 +65,6 @@ namespace Pyramid.Console.Application
 
         private static string GetFilePath(IReadOnlyList<string> args) =>
             args.FirstOrDefault() ??
-            throw new ApplicationException("File path needs to be passed as input");
+            throw new ConsoleApplicationException("File path needs to be passed as input");
     }
 }
