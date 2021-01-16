@@ -33,9 +33,9 @@ namespace Pyramid.Solver.Builder
             if (IsCurrentRowBottom(parent))
                 return new List<PyramidNode>() {parent};
 
-            var nodes = GetChildren(parent);
+            var children = GetChildren(parent);
 
-            return nodes.SelectMany(GetBottomNodes);
+            return children.SelectMany(GetBottomNodes);
         }
 
         /// <summary>
