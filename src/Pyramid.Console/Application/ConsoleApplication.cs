@@ -21,7 +21,6 @@ namespace Pyramid.Console.Application
         private readonly IInputParser _inputParser;
         private readonly IPyramidSolver _pyramidSolver;
 
-
         public ConsoleApplication(
             ILogger<ConsoleApplication> logger,
             IOutputWriter outputWriter,
@@ -50,14 +49,15 @@ namespace Pyramid.Console.Application
         {
             _logger.LogInformation("Running with args {@args}", args);
             var filePath = GetFilePath(args);
-            var pyramid = _inputParser.ParsePyramid(filePath);
+            var pyramidRows = _inputParser.ParsePyramid(filePath);
 
-            var result = _pyramidSolver.Solve(pyramid);
+            var result = _pyramidSolver.Solve(pyramidRows);
             OutputResult(result);
         }
 
         private void OutputResult(PyramidResult result)
         {
+            _logger.LogInformation("Outputting result {@res}", result);
             var path = string.Join(", ", result.Path);
             var msg = $"Max sum: {result.Sum}{Environment.NewLine}Path: {path}";
             _outputWriter.WriteMessage(msg);
