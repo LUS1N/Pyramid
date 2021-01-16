@@ -24,4 +24,4 @@ possible sum of the numbers per the given rules below:
 ### Execution steps
 
 - `cd src/Pyramid.Console`
-- `dotnet run -c Release Requests/big.txt`
+- `dotnet run -c Release Requests/small.txt` or `dotnet run -c Release Requests/big.txt`
