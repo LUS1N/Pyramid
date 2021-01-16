@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 using Moq.AutoMock;
-using Pyramid.Console.InputParser;
+using Pyramid.Console.Application.InputParser;
 using Xunit;
 
 namespace Pyramid.Console.Tests.InputParser

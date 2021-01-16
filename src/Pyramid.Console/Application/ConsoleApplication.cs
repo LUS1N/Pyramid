@@ -5,6 +5,11 @@ using Microsoft.Extensions.Logging;
 
 namespace Pyramid.Console.Application
 {
+    public interface IApplication
+    {
+        void Run(string[] args);
+    }
+
     public class ConsoleApplication : IApplication
     {
         private readonly ILogger<ConsoleApplication> _logger;

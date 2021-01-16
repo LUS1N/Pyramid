@@ -1,7 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Pyramid.Console.Application;
-using Pyramid.Console.InputParser;
+using Pyramid.Console.Application.InputParser;
 using Serilog;
 
 namespace Pyramid.Console
@@ -10,14 +10,14 @@ namespace Pyramid.Console
     {
         public static void ConfigureServices(IServiceCollection services)
         {
-            services.SetupPyramidLogging();
+            services.AddPyramidLogging();
             services.AddPyramidSolver();
 
             services.AddTransient<IApplication, ConsoleApplication>();
             services.AddTransient<IInputParser, InputFileParser>();
         }
 
-        private static IServiceCollection SetupPyramidLogging(this IServiceCollection services)
+        private static IServiceCollection AddPyramidLogging(this IServiceCollection services)
         {
 #if DEBUG
             Log.Logger = new LoggerConfiguration()
