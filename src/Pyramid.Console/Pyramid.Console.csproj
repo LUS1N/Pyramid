@@ -13,13 +13,16 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Update="small.txt">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
+      <ProjectReference Include="..\Pyramid\Pyramid.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Pyramid\Pyramid.csproj" />
+      <None Update="Payloads\small.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Payloads\big.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>
