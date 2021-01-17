@@ -52,5 +52,27 @@ namespace Pyramid.Tests
             result.Sum.Should().Be(8186);
             result.Path.Should().Equal(215, 192, 269, 836, 805, 728, 433, 528, 863, 632, 931, 778, 413, 310, 253);
         }
+
+        [Fact]
+        public void AlwaysReachesBottomRow()
+        {
+            // arrange
+            int[][] input =
+            {
+                new[] {1},
+                new[] {8, 9},
+                new[] {1001, 5, 9},
+                new[] {1, 5, 2, 3},
+            };
+
+            var sut = MakeSut();
+
+            // act
+            var result = sut.Solve(input);
+
+            // assert
+            result.Sum.Should().Be(16);
+            result.Path.Should().Equal(1, 8, 5, 2);
+        }
     }
 }
